@@ -54,7 +54,7 @@ void FibPlus(int* firstNum, int* secondNum, size_t* firstCount, size_t* secondCo
 
 
 int Fibonacci(int* firstNum, int*secondNum, size_t* countFibNum, size_t* firstCount, size_t* secondCount, size_t* longNum) {
-    if (*countFibNum >= 500000) {
+    if (*countFibNum >= 50000) {
         return 0;
     }
     ++(*countFibNum);
@@ -131,7 +131,7 @@ void GoldenRatio(int* firstNum, int* secondNum, size_t* firstCount, size_t* seco
     FibMinus(firstNum, secondNum, firstCount, secondCount);
     printf(".");
     FibPow(secondNum, secondCount);
-    while (counter < 10000) {
+    while (counter < 1000) {
         FibMinus(firstNum, secondNum, firstCount, secondCount);
         FibPow(secondNum, secondCount);
         ++counter;
@@ -140,7 +140,7 @@ void GoldenRatio(int* firstNum, int* secondNum, size_t* firstCount, size_t* seco
 
 
 int main() {
-    size_t longNum = 120000;
+    size_t longNum = 12000;
     int* firstNum = (int*)calloc(longNum,sizeof(int));
     int* secondNum = (int*)calloc(longNum, sizeof(int));
     size_t firstCount = 1;
